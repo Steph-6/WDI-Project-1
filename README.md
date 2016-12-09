@@ -1,1 +1,1 @@
-# WDI-Project-1
+# WDI_PROJECT_1
