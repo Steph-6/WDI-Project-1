@@ -3,10 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="js/app.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>First Project</h1>
+    <h1><img src="css/title.gif"></h1>
+    <h3>Quick, tap the tile before it's too late.</h3>
+    <h3>Careful not to tap the bomb though!</h3>
+
+    <div class="left-box">
+      <button type="button">New Game</button>
+      <p id="lives">* * * * *</p>
+    </div>
+
+    <ul class="game-board">
+      <div class="row1">
+        <li class="grid" id="grid1.1"></li>
+        <li class="grid" id="grid1.2"></li>
+        <li class="grid" id="grid1.3"></li>
+      </div>
+      <div class="row2">
+        <li class="grid" id="grid2.1"></li>
+        <li class="grid" id="grid2.2"></li>
+        <li class="grid" id="grid2.3"></li>
+      </div>
+      <div class="row3">
+        <li class="grid" id="grid3.1"></li>
+        <li class="grid" id="grid3.2"></li>
+        <li class="grid" id="grid3.3"></li>
+      </div>
+      <div class="row4">
+        <li class="grid" id="grid4.1"></li>
+        <li class="grid" id="grid4.2"></li>
+        <li class="grid" id="grid4.3"></li>
+      </div>
+      <div class="row5">
+        <li class="play-row" id="grid5.1"></li>
+        <li class="play-row" id="grid5.2"></li>
+        <li class="play-row" id="grid5.3"></li>
+      </div>
+      <div class="row6">
+        <li class="bottom-grid" id="grid6.1"></li>
+        <li class="bottom-grid" id="grid6.2"></li>
+        <li class="bottom-grid" id="grid6.3"></li>
+      </div>
+    </ul>
+
+    <div class="right-box">
+      <p>Score</p>
+      <div id="score">0</div>
+    </div>
+
   </body>
 </html>

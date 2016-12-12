@@ -1,3 +1,70 @@
 body {
-  background-color: yellow;
+  background-color: #eeeeee;
+  font-family: 'Space Mono', monospace;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: -20px;
+}
+
+.left-box {
+  font-size: 30px;
+  margin: 200px 0px 0px 50px;
+  float: left;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 170px;
+  height: 150px;
+  text-align: center;
+}
+
+.right-box{
+  font-size: 30px;
+  float: right;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: -375px 50px 0px -10px;
+  width: 180px;
+  height: 170px;
+  text-align: center;
+}
+
+button {
+  padding: 15px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+ul.game-board {
+  width: 300px;
+  height: 500px;
+  background-color: red;
+  margin: 40px auto;
+  padding: 0;
+  border: 6px solid black;
+}
+
+li {
+  list-style-type: none;
+  border-radius:40px;
+}
+
+.grid, .play-row {
+  width: 94px;
+  height: 94px;
+  border: 3px solid black;
+  float: left;
+}
+
+.bottom-grid {
+  width: 94px;
+  height: 94px;
+  border: 3px solid black;
+  float: left;
+  /*display: none;*/
 }
