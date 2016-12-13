@@ -1,10 +1,9 @@
 var colors  = ['url(images/leaf.png)', 'url(images/bomb2.png)', 'url(images/leaf2.png)', 'url(images/leaf3.png)'];
 var color   = colors[0];
-var timer   = 1300;
+var timer   = 900;
 var score   = 0;
 var combo   = 0;
 var bomb    = 0;
-var i       = 0;
 var $square;
 
 
@@ -15,12 +14,12 @@ $(function() {
   setInterval (function() {
 
     if (score >= 10) {
-      timer = 1100;
+      timer = 800;
       color = colors[chooseSquare(0,3)];
       $('h3').html('Level 2!');
     }
     if (score >= 20) {
-      timer = 800;
+      timer = 700;
       color = colors[chooseSquare(0,3)];
       $('h3').html('Level 3!');
     }
@@ -35,7 +34,7 @@ $(function() {
       $('h3').html('Woah High Combo!');
     }
 
-    if (bomb > 3) {
+    if (bomb >= 3) {
       $('#score').html('0');
       $('#combo').html('Combo 0');
       $('h3').html('Too Bad, Game Over!');
@@ -76,12 +75,13 @@ $(function() {
         } else if (coodY < 750 && coodY > 550 && color === colors[1]) {
           $square.css('background-image', 'url(images/bang2.png)');
           bomb++;
+          score--;
           combo = 0;
           $('#combo').html('Combo ' + combo);
           $('#bomb').get(0).play();
         }
       });
-  }, timer-500);
+  }, timer-200);
 
   $('button').on('click', function(){
     location.reload();
