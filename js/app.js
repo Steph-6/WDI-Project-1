@@ -39,7 +39,6 @@ $(function() {
       $('#score').html('0');
       $('#combo').html('Combo 0');
       $('h3').html('Too Bad, Game Over!');
-      //$('#over').get(0).play();
       return;
     }
 
@@ -55,7 +54,7 @@ $(function() {
 
     $('#column' + chooseSquare(1,4)).append($square);
     $square.animate(
-      {top: '+=492px'},
+           {top: '+=492px'},
       {duration: timer,
          easing: 'linear',
        complete: function() {
@@ -63,42 +62,26 @@ $(function() {
       }
     });
 
-    $square.on('mouseover', function() {
+    $square.on('mouseover', function(e) {
+        var coodY = e.pageY;
 
-      var cursor = document.querySelectorAll(':hover');
-      console.log(cursor);
+        if (coodY < 750 && coodY > 550 && color !== colors[1]) {
+          combo++;
+          score += 2;
+          $('#score').html(score);
+          $('#combo').html('Combo ' + combo);
+          $('#click').get(0).play();
+          $(this).remove();
 
-      if ($square.parent().offset().top + $square.parent()[0].offsetHeight - $square.offset().top < 600 && color !== colors[1]) {
-
-        combo++;
-        score += 2;
-        $('#score').html(score);
-        $('#combo').html('Combo ' + combo);
-        $('#click').get(0).play();
-        $(this).remove();
-
-      } else if (($square.parent().offset().top + $square.parent()[0].offsetHeight) - $square.offset().top < 600 && color === colors[1])  {
-
-        $square.css('background-image', 'url(images/bang2.png)');
-        bomb++;
-        combo = 0;
-        $('#combo').html('Combo ' + combo);
-        $('#bomb').get(0).play();
-
-      }
-    });
+        } else if (coodY < 750 && coodY > 550 && color === colors[1]) {
+          $square.css('background-image', 'url(images/bang2.png)');
+          bomb++;
+          combo = 0;
+          $('#combo').html('Combo ' + combo);
+          $('#bomb').get(0).play();
+        }
+      });
   }, timer-500);
-
-  // $('.column').on('click', function(e) {
-  //   if(e.target == e.currentTarget){
-  //     score--;
-  //     $('#score').html(score);
-  //     // lives = lives[0];
-  //     // console.log(lives);
-  //     combo = 0;
-  //     $('#combo').html('Combo = ' + combo);
-  //   }
-  // })
 
   $('button').on('click', function(){
     location.reload();
