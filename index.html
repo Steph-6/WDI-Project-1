@@ -10,12 +10,14 @@
     <script src="js/app.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Tap The Tile</h1>
-    <h3>Quick, tap the tile before it's too late.<br />Careful not to tap the bomb though!</h3>
+    <header>
+      <h1>Forest Floor</h1>
+      <h3>Collect all the leaves, but careful, hit 3 bombs and game over!</h3>
+    </header>
 
     <div class="left-box">
       <button type="button">New Game</button>
-      <p id="combo">Combo = 0</p>
+      <p id="combo">Combo 0</p>
     </div>
 
     <div class="game">
@@ -30,8 +32,9 @@
       <div id="score">0</div>
     </div>
 
-    <audio src="Sounds/click.wav" id="click"></audio>
-    <audio src="Sounds/bomb.wav" id="bomb"></audio>
-
+    <audio src="Sounds/score.wav" id="click"></audio>
+    <audio src="Sounds/pop.wav" id="bomb"></audio>
+    <audio src="Sounds/over.wav" id="over"></audio>
+    <img src="css/basket.png" id="basket">
   </body>
 </html>

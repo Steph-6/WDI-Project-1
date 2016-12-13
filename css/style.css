@@ -1,26 +1,62 @@
 body {
-  background-color: #eeeeee;
+  background-image: url('Cartoons_trees_forest_woods_artwork_2560x1600.jpg');
+  background-size: cover;
+  background-position: center;
   font-family: 'Space Mono', monospace;
 }
 
-h1, h3 {
+header {
+  background-color: white;
+  border: 10px solid black;
+  opacity: 0.55;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 40px;
   text-align: center;
 }
 
 h3 {
+  font-size: 20px;
   margin-top: -20px;
+  text-align: center;
 }
 
-#square {
-  position: absolute;
-  top: 0;
-  width: 100px;
-  height: 100px;
+button {
+  padding: 13px;
+  font-size: 25px;
+  font-family: 'Space Mono', monospace;
   border: 3px solid black;
-  border-radius: 4px;
-  margin-left: -3px;
-  z-index: 1;
-  background-size: 100px 100px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.left-box {
+  font-size: 30px;
+  background-color: white;
+  margin: 150px 0px 0px 50px;
+  padding: 20px 4px 0px 4px;
+  float: left;
+  border: 5px solid black;
+  border-radius: 5px;
+  width: 170px;
+  height: 180px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.right-box{
+  font-size: 30px;
+  background-color: white;
+  float: right;
+  border: 5px solid black;
+  border-radius: 5px;
+  margin: -602px 50px 0px -70px;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  opacity: 0.7;
 }
 
 .game {
@@ -33,78 +69,52 @@ h3 {
 .column {
   position: relative;
   width: 100px;
-  height: 600px;
-  border: 3px solid black;
+  height: 550px;
   float: left;
   margin-top: -54px;
   margin-left: -4px;
 }
 
+#square {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  margin-left: -3px;
+  z-index: 1;
+  background-size: 100px 100px;
+}
+
 #play-row {
-  border: 3px solid black;
-  width: 303px;
+  width: 320px;
   height: 106px;
   position: absolute;
   bottom: 48px;
-  margin-left: -4px;
+  margin-left: -8px;
   margin-bottom: 100px;
-  background-color: red;
+  background-color: white;
+  opacity: 0.3;
+  -webkit-box-shadow: 14px 20px 50px 23px rgba(0,0,0,0.45);
+  -moz-box-shadow: 14px 20px 50px 23px rgba(0,0,0,0.45);
+  box-shadow: 14px 20px 50px 23px rgba(0,0,0,0.45);
 }
 
-.left-box {
-  font-size: 30px;
-  margin: 200px 0px 0px 50px;
-  float: left;
-  border: 3px solid black;
+#basket {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+}
+
+img {
+  filter: drop-shadow(5px 20px 10px #222);
+}
+
+#alert {
+  height: 100px;
+  width: 500px;
+  border: 10px solid black;
   border-radius: 5px;
-  padding: 10px;
-  width: 170px;
-  height: 150px;
-  text-align: center;
+  background-color: white;
+  margin: 0 auto -10px;
 }
-
-.right-box{
-  font-size: 30px;
-  float: right;
-  border: 3px solid black;
-  border-radius: 5px;
-  margin: -552px 50px 0px -70px;
-  width: 180px;
-  height: 170px;
-  text-align: center;
-}
-
-button {
-  padding: 13px;
-  font-size: 25px;
-  border-radius: 5px;
-}
-
-/*ul.game-board {
-  width: 300px;
-  height: 500px;
-  background-color: red;
-  margin: 40px auto;
-  padding: 0;
-  border: 6px solid black;
-}
-
-li {
-  list-style-type: none;
-  border-radius:40px;
-}
-
-.grid, .play-row {
-  width: 94px;
-  height: 94px;
-  border: 3px solid black;
-  float: left;
-}
-
-.bottom-grid {
-  width: 94px;
-  height: 94px;
-  border: 3px solid black;
-  float: left;
-  /*display: none;*/
-}*/
