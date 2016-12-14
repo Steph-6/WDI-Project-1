@@ -8,9 +8,7 @@ var $square;
 
 
 $(function() {
-  var $click = $('#click');
   $('#basket').css('display', 'none');
-
   setInterval (function() {
 
     if (score >= 10) {
@@ -64,7 +62,7 @@ $(function() {
     $square.on('mouseover', function(e) {
         var coodY = e.pageY;
 
-        if (coodY < 750 && coodY > 550 && color !== colors[1]) {
+        if (coodY < 775 && coodY > 550 && color !== colors[1]) {
           combo++;
           score += 2;
           $('#score').html(score);
@@ -72,7 +70,7 @@ $(function() {
           $('#click').get(0).play();
           $(this).remove();
 
-        } else if (coodY < 750 && coodY > 550 && color === colors[1]) {
+        } else if (coodY < 775 && coodY > 550 && color === colors[1]) {
           $square.css('background-image', 'url(images/bang2.png)');
           bomb++;
           score--;
