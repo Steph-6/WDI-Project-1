@@ -17,12 +17,12 @@ $(function() {
       $('h3').html('Level 2!');
     }
     if (score >= 20) {
-      timer = 700;
+      timer = 600;
       color = colors[chooseSquare(0,3)];
       $('h3').html('Level 3!');
     }
     if (score >= 30) {
-      timer = 700;
+      timer = 400;
       color = colors[chooseSquare(0,3)];
       $('h3').html('Level 4!');
     }
