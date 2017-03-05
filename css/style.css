@@ -5,17 +5,18 @@ body {
   font-family: 'Space Mono', monospace;
 }
 
-header {
+/*header {
   background-color: white;
   border: 10px solid black;
-  opacity: 0.55;
+  opacity: 0.85;
   border-radius: 5px;
-}
+}*/
 
 h1 {
   font-size: 50px;
   font-weight: bold;
   text-align: center;
+  opacity: 1;
 }
 
 h3 {
@@ -44,7 +45,7 @@ button {
   width: 170px;
   height: 180px;
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .right-box{
@@ -57,7 +58,7 @@ button {
   width: 180px;
   height: 180px;
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .game {

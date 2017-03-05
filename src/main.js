@@ -1,6 +1,6 @@
 var colors  = ['url(images/leaf.png)', 'url(images/bomb2.png)', 'url(images/leaf2.png)', 'url(images/leaf3.png)'];
 var color   = colors[0];
-var timer   = 900;
+var timer   = 2000;
 var score   = 0;
 var combo   = 0;
 var bomb    = 0;
@@ -32,7 +32,7 @@ $(function() {
       $('h3').html('Woah High Combo!');
     }
 
-    if (bomb >= 3) {
+    if (bomb >= 30) {
       $('#score').html('0');
       $('#combo').html('Combo 0');
       $('h3').html('Too Bad, Game Over!');
@@ -79,7 +79,7 @@ $(function() {
           $('#bomb').get(0).play();
         }
       });
-  }, timer-200);
+  }, timer);
 
   $('button').on('click', function(){
     location.reload();

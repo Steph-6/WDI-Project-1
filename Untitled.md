@@ -15,6 +15,8 @@ Losses:
 
 --
 
+
+
 Improvements:
 
 - Moving most of the code into seperate functions that do not rely on the variable name.
