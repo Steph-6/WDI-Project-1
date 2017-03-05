@@ -4,7 +4,10 @@
 ###Overview
 The first project was made in week 2 of the immersive course and was built with HTML, CSS and Javascript/jQuery.  
 Forest Floor is a calming and fun game in which the player has to catch falling leaves with their mouse, whilst also avoiding falling bombs.  
-The game can be played here: &&&&&&&
+The game can be played here: [Forest Floor](https://afternoon-journey-42512.herokuapp.com/)
+
+![image](http://imgur.com/mLDtaRv.png)
+
 ***
 
 ###Intial Concept - MVP
