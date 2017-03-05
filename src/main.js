@@ -1,6 +1,6 @@
 var colors  = ['url(images/leaf.png)', 'url(images/bomb2.png)', 'url(images/leaf2.png)', 'url(images/leaf3.png)'];
 var color   = colors[0];
-var timer   = 2000;
+var timer   = 1000;
 var score   = 0;
 var combo   = 0;
 var bomb    = 0;
@@ -12,17 +12,17 @@ $(function() {
   setInterval (function() {
 
     if (score >= 10) {
-      timer = 800;
+      timer = 900;
       color = colors[chooseSquare(0,3)];
       $('h3').html('Level 2!');
     }
     if (score >= 20) {
-      timer = 600;
+      timer = 850;
       color = colors[chooseSquare(0,3)];
       $('h3').html('Level 3!');
     }
     if (score >= 30) {
-      timer = 400;
+      timer = 800;
       color = colors[chooseSquare(0,3)];
       $('h3').html('Level 4!');
     }
@@ -32,7 +32,7 @@ $(function() {
       $('h3').html('Woah High Combo!');
     }
 
-    if (bomb >= 30) {
+    if (bomb >= 5) {
       $('#score').html('0');
       $('#combo').html('Combo 0');
       $('h3').html('Too Bad, Game Over!');
